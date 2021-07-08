@@ -1,4 +1,5 @@
 import "./user.css";
+import {Link} from "react-router-dom";
 import { PermIdentity,CalendarToday,MailOutline,PhoneAndroid,LocationSearching,Publish } from "@material-ui/icons";
 
 export default function User() {
@@ -6,7 +7,10 @@ export default function User() {
         <div className="user">
             <div className="userTitleContainer">
                 <h1 className="userTitle">Edit User</h1>
+                <Link to="/newUser">
                 <button className="userAddButton">Create</button>
+                </Link>
+               
             </div>
             <div className="userContainer">
                 <div className="userShow">
@@ -100,9 +104,10 @@ export default function User() {
                                 src="../../Assets/images/alf1.jpeg"
                                  alt=""
                                  />
-                                 <label htmlFor="file"><Publish /></label>
+                                 <label htmlFor="file"><Publish className="userUpdateIcon" /></label>
                                  <input type="file" id="file" style={{display:"none"}}/>
                             </div>
+                            <button className="userUpdateButton">Update</button>
                         </div>
                     </form>
                 </div>
