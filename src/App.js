@@ -14,11 +14,13 @@ import NewUser from "./components/pages/newUser/NewUser";
 import ProductList from "./components/pages/productList/ProductList";
 import Product from "./components/pages/product/Product";
 import NewProduct from "./components/pages/newProduct/NewProduct";
+import Login from "./components/pages/login/Login";
 
 function App() {
   return (
 <Router>
   <Topbar />
+ 
  <div className="container">
    <Sidebar />
    <Switch>
@@ -43,8 +45,10 @@ function App() {
      <Route path="/newProduct">
      <NewProduct />
      </Route>
+    
     </Switch>
  </div>
+ 
 </Router>
   );
 }
